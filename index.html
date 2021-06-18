@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Chronophotographie 3D</title>
+
+    <!-- SCRIPTS -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script>
+        // chargement modele
+        AFRAME.registerComponent('model_loaded', {
+            init: function() {
+                var el = this.el;
+                el.addEventListener('model-loaded', () => {
+                    console.log(">>>> modele chargé "+el.id);
+                });
+                el.addEventListener('model-error', () => {
+                      console.log(">>>> modele erreur "+el.id);
+                });
+            }
+        });
+    </script>
+  </head>
+
+  <body>
+    <a-scene>
+        <a-box color="lightblue" position="0 0 -10" rotation="0 45 0" scale="2 2 2"></a-box>
+        <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
+
+        <a-assets>
+            <a-assets-item id="glbDecors" src="./assets/chrono1.glb"></a-assets-item>
+        </a-assets>
+            <!-- DECORS 3D -->
+            <a-entity 
+            id ="decors" gltf-model="#glbDecors" position="0 2 -10" rotation="0 90 0" model_loaded shadow="cast:true; receive:true">
+            </a-entity>
+    </a-scene>
+  </body>
+</html>
