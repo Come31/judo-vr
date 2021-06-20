@@ -59,17 +59,17 @@
               color="#FFFFFF"></a-text>
           </a-entity>
           <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: toon; color: #ccccff"></a-entity>
-          <a-entity id="head" camera position="0 1.6 0" look-controls wasd-controls>
+          <a-entity id="head" camera position="7 1.6 -4" look-controls wasd-controls>
           </a-entity>
         </a-entity>
 
      <!-- OBJETS DE LA SCENE oui oui-->
 
-     <a-entity camera look-controls wasd-controls position="0 1.7 0"></a-entity>
+     <a-entity camera look-controls wasd-controls position="5 1.7 -5" rotation="0 0 0"></a-entity>
      <a-sky color="#e2e2e2"></a-sky>
-     <a-light type="ambient" color="#222" intensity="6"></a-light>
-     <a-light type="point" color="white" position="5 5 -3" intensity="0.3"></a-light>
-     <a-light type="point" color="white" position="-5 5 -3" intensity="0.3"></a-light>
+     <a-light type="ambient" color="#222" intensity="5"></a-light>
+     <a-light type="point" color="white" position="5 5 -3" intensity="0.2"></a-light>
+     <a-light type="point" color="white" position="-5 5 -3" intensity="0.2"></a-light>
 
 
 
@@ -77,7 +77,7 @@
             -->
      <a-plane color="#CCC" position="0 -1 -10" height="50" width="50" rotation="270 0 0"> </a-plane>
 
-     <a-entity id="decors" gltf-model="#glbDecors" position="0 2 8" rotation="0 0 0" model_loaded
+     <a-entity id="decors" gltf-model="#glbDecors" position="0 0 8" rotation="0 0 0" model_loaded
        shadow="cast:true; receive:true">
      </a-entity>
 
